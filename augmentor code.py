@@ -1,0 +1,15 @@
+import Augmentor
+p = Augmentor.Pipeline(r"C:\Users\Umairaltaf\Desktop\newaug")
+p.zoom(probability=0.3, min_factor=0.7, max_factor=1.5)
+p.flip_top_bottom(probability=0.4)
+p.random_brightness(probability=0.6, min_factor=0.6, max_factor=1.5)
+p.random_distortion(probability=1, grid_width=5, grid_height=5, magnitude=2)
+p.greyscale(probability=1)
+p.rotate90(probability=1)
+p.rotate180(probability=1)
+p.rotate270(probability=1)
+p.skew_left_right(probability=1, magnitude=0.5)
+p.skew_corner(probability=1,magnitude=0.5)
+p.skew_top_bottom(probability=1, magnitude=1)
+
+p.sample(160)
